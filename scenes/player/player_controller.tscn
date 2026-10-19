@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://06ssu3atpbbe"]
+
+[ext_resource type="Script" uid="uid://cghgbhg52cjds" path="res://assets/scripts/player/arm_pivot.gd" id="1_iivv4"]
+[ext_resource type="ArrayMesh" uid="uid://bpauq843yd5ve" path="res://assets/models/skovoroda.obj" id="2_iivv4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0yd1l"]
+radius = 0.06
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_kps3k"]
+radius = 0.06
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_0yd1l"]
+height = 0.15348388
+
+[node name="PlayerController" type="CharacterBody3D" unique_id=1848464302]
+
+[node name="BaseCollision" type="CollisionShape3D" parent="." unique_id=561011742]
+shape = SubResource("CapsuleShape3D_0yd1l")
+
+[node name="BaseMesh" type="MeshInstance3D" parent="." unique_id=1986675119]
+mesh = SubResource("CapsuleMesh_kps3k")
+
+[node name="ArmPivot" type="Node3D" parent="." unique_id=1397276099]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1524603)
+script = ExtResource("1_iivv4")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="ArmPivot" unique_id=1885400894]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArmPivot/CharacterBody3D" unique_id=560329066]
+transform = Transform3D(-2.1855694e-10, 0, -0.005, 0, 0.005, 0, 0.005, 0, -2.1855694e-10, 0, 0, -1.0151169)
+mesh = ExtResource("2_iivv4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArmPivot/CharacterBody3D" unique_id=789632929]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004939735, 0.03146392, -1.0236173)
+shape = SubResource("CylinderShape3D_0yd1l")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1819879716]
+transform = Transform3D(1, 0, 0, 0, 0.99850214, 0.054713666, 0, -0.054713666, 0.99850214, 0, 0.6642064, 0)
+fov = 73.5

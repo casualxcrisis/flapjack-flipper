@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ctsqhorxtmvdq"]
+
+[ext_resource type="Texture2D" uid="uid://bn3yvw2hcm0ka" path="res://assets/textures/wall/brick007.png" id="1_gwhjf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yimtk"]
+albedo_texture = ExtResource("1_gwhjf")
+uv1_scale = Vector3(8.945, 1.71, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kps3k"]
+material = SubResource("StandardMaterial3D_yimtk")
+size = Vector3(0.46, 1.935, 8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0yd1l"]
+
+[node name="Wall" type="StaticBody3D" unique_id=69911127]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=333630645]
+mesh = SubResource("BoxMesh_kps3k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1971965785]
+shape = SubResource("BoxShape3D_0yd1l")

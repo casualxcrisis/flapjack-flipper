@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://co6o2qcke63tx"]
+
+[ext_resource type="Texture2D" uid="uid://dnnrcrul76477" path="res://assets/textures/ground/StoneFloor1.png" id="1_tfs2e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0yd1l"]
+size = Vector3(1.975, 0.055, 2.025)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wa4mr"]
+albedo_texture = ExtResource("1_tfs2e")
+uv1_scale = Vector3(14.57, 14.57, 14.57)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0yd1l"]
+material = SubResource("StandardMaterial3D_wa4mr")
+
+[node name="GroundCobble" type="StaticBody3D" unique_id=199002274]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=962415104]
+shape = SubResource("BoxShape3D_0yd1l")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1461787548]
+mesh = SubResource("PlaneMesh_0yd1l")
