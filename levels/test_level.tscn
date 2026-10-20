@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://1p1vlowr2e7p" path="res://scenes/objects/pancake.tscn" id="5_o6mel"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_k3vxt"]
-friction = 0.83
 
 [node name="TestLevel" type="Node3D" unique_id=266510134]
 
