@@ -30,7 +30,7 @@ enabled=PackedStringArray("res://addons/unibuilder/plugin.cfg")
 
 [global_group]
 
-flip_score=""
+flip_score_1=""
 
 [input]
 

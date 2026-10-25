@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://1p1vlowr2e7p"]
 
-[ext_resource type="Script" uid="uid://rsdcfeyi88ow" path="res://assets/scripts/objects/pancake.gd" id="1_j34bs"]
-
 [sub_resource type="SphereMesh" id="SphereMesh_kps3k"]
 radius = 0.315
 height = 0.09
@@ -15,7 +13,6 @@ radius = 0.265
 
 [node name="PancakeOne" type="RigidBody3D" unique_id=412852835]
 continuous_cd = true
-script = ExtResource("1_j34bs")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1742129428]
 mesh = SubResource("SphereMesh_kps3k")

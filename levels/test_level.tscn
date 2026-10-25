@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://06ssu3atpbbe" path="res://scenes/player/player_controller.tscn" id="1_x25rp"]
 [ext_resource type="PackedScene" uid="uid://co6o2qcke63tx" path="res://scenes/environment/ground_cobble.tscn" id="3_gmgay"]
 [ext_resource type="PackedScene" uid="uid://ctsqhorxtmvdq" path="res://scenes/environment/wall.tscn" id="4_w7r7j"]
-[ext_resource type="PackedScene" uid="uid://l05a8cbtsbkn" path="res://scenes/objects/pancake_two.tscn" id="5_o6mel"]
+[ext_resource type="PackedScene" uid="uid://bhirsi31ifxyo" path="res://scenes/objects/pancake_three.tscn" id="5_o6mel"]
 
 [node name="TestLevel" type="Node3D" unique_id=266510134]
 
@@ -43,5 +43,5 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.7
 [node name="AreaLight3D" type="AreaLight3D" parent="Environment" unique_id=599967586]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.413978, 0.74338794, 13.918163)
 
-[node name="PancakeTwo" parent="." unique_id=996950828 instance=ExtResource("5_o6mel")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2438881, 2)
+[node name="PancakeThree" parent="." unique_id=839046052 instance=ExtResource("5_o6mel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03182566, 1.3670673, 2.1813352)

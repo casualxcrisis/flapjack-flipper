@@ -55,6 +55,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004939735, 0.012879252, -1
 shape = SubResource("CylinderShape3D_0yd1l")
 
 [node name="FlipZone" type="Area3D" parent="ArmPivot/CharacterBody3D" unique_id=1901044257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.018291682, 0)
 script = ExtResource("5_5tt2p")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ArmPivot/CharacterBody3D/FlipZone" unique_id=1629163009]

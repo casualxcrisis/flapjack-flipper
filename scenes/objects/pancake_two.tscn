@@ -9,6 +9,10 @@ height = 0.225
 height = 0.225
 radius = 0.315
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kps3k"]
+height = 0.05
+radius = 0.225
+
 [node name="PancakeTwo" type="RigidBody3D" unique_id=996950828]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1313698353]
@@ -17,3 +21,9 @@ mesh = SubResource("CylinderMesh_paa45")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=240907312]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0016525537, 0)
 shape = SubResource("CylinderShape3D_axl34")
+
+[node name="FlipScore" type="Area3D" parent="." unique_id=1956011830 groups=["flip_score_1"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FlipScore" unique_id=845327110]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16497302, 0)
+shape = SubResource("CylinderShape3D_kps3k")
