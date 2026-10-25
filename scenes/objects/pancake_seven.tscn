@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://jr0epwb82i7y"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_m2rog"]
+size = Vector3(0.74, 0.69, 0.105)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_q6yj4"]
+points = PackedVector3Array(-0.37587303, -0.35087302, -0.05837302, 0.010387738, 0.31436506, 0.0525, -0.37587303, -0.35087302, 0.059087306, 0.37587303, -0.35087302, -0.05837302, -0.010530037, 0.31865078, -0.0525, 0.37587303, -0.35087302, 0.059087306, -0.37587303, -0.32734874, 0.059087306, 0.010530037, 0.31865078, -0.0525, 0.37587303, -0.32734874, 0.059087306, -0.010387738, 0.31436506, 0.0525)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0yd1l"]
+size = Vector3(0.27, 0.095, 0.325)
+
+[node name="PancakeSeven" type="RigidBody3D" unique_id=1937346783]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1482763487]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("PrismMesh_m2rog")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=734947165]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_q6yj4")
+
+[node name="FlipScore" type="Area3D" parent="." unique_id=1569842461 groups=["flip_score_1"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FlipScore" unique_id=330147318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10411316, -0.10456383)
+shape = SubResource("BoxShape3D_0yd1l")
