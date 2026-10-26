@@ -3,8 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://b82q1jftmkrue" path="res://scenes/environment/green_sky.tscn" id="1_46lwt"]
 [ext_resource type="PackedScene" uid="uid://06ssu3atpbbe" path="res://scenes/player/player_controller.tscn" id="1_x25rp"]
 [ext_resource type="PackedScene" uid="uid://co6o2qcke63tx" path="res://scenes/environment/ground_cobble.tscn" id="3_gmgay"]
-[ext_resource type="PackedScene" uid="uid://ctsqhorxtmvdq" path="res://scenes/environment/wall.tscn" id="4_w7r7j"]
 [ext_resource type="PackedScene" uid="uid://c4gk7a4x8bqnl" path="res://scenes/objects/pancake_nine.tscn" id="5_o6mel"]
+[ext_resource type="PackedScene" uid="uid://dvfhdicwin7l7" path="res://assets/models/big_head_cromulons_from_rick_and_morty.glb" id="6_e7anx"]
+[ext_resource type="PackedScene" uid="uid://y8flpubg45qh" path="res://assets/models/mouth.glb" id="7_ur00s"]
 
 [node name="TestLevel" type="Node3D" unique_id=266510134]
 
@@ -22,26 +23,11 @@ transform = Transform3D(7.195, 0, 0, 0, 7.195, 0, 0, 0, 7.195, 0, 0, 6.5609064)
 
 [node name="Wall" type="Node3D" parent="Environment" unique_id=483298664]
 
-[node name="Wall" parent="Environment/Wall" unique_id=69911127 instance=ExtResource("4_w7r7j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, 9.722834)
-
-[node name="Wall6" parent="Environment/Wall" unique_id=233178801 instance=ExtResource("4_w7r7j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, 1.917202)
-
-[node name="Wall4" parent="Environment/Wall" unique_id=30601664 instance=ExtResource("4_w7r7j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.221485, 1, 9.722834)
-
-[node name="Wall5" parent="Environment/Wall" unique_id=328652287 instance=ExtResource("4_w7r7j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.221485, 1, 1.8708019)
-
-[node name="Wall2" parent="Environment/Wall" unique_id=1939325009 instance=ExtResource("4_w7r7j")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.182341, 1, 13.9177885)
-
-[node name="Wall3" parent="Environment/Wall" unique_id=288498477 instance=ExtResource("4_w7r7j")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.7654147, 1, 13.9177885)
-
-[node name="AreaLight3D" type="AreaLight3D" parent="Environment" unique_id=599967586]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.413978, 0.74338794, 13.918163)
-
 [node name="PancakeNine" parent="." unique_id=1381822989 instance=ExtResource("5_o6mel")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 1.1045219, 2.1497514)
+
+[node name="Sketchfab_Scene" parent="." unique_id=1869561938 instance=ExtResource("6_e7anx")]
+transform = Transform3D(-1.0204793, 0, -8.921314e-08, 0, 1.0204793, 0, 8.921314e-08, 0, -1.0204793, -0.047782835, 2.0676415, 7.2695193)
+
+[node name="Sketchfab_Scene2" parent="." unique_id=288512520 instance=ExtResource("7_ur00s")]
+transform = Transform3D(0.71780896, 0, 0, 0, 0.79292095, -0.13336653, 0, 0.29234505, 0.36172703, -0.044141293, 1.6436394, 5.657683)
