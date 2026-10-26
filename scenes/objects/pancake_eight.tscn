@@ -22,7 +22,7 @@ mesh = SubResource("CylinderMesh_0yd1l")
 transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_2lawv")
 
-[node name="FlipScore" type="Area3D" parent="." unique_id=227855393 groups=["flip_score_1"]]
+[node name="FlipScore" type="Area3D" parent="." unique_id=227855393 groups=["flip_score_8"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FlipScore" unique_id=155122164]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15295777, 0)
