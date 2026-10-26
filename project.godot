@@ -31,6 +31,15 @@ enabled=PackedStringArray("res://addons/unibuilder/plugin.cfg")
 [global_group]
 
 flip_score_1=""
+flip_score_2=""
+flip_score_3=""
+flip_score_4=""
+flip_score_5=""
+flip_score_6=""
+flip_score_7=""
+flip_score_8=""
+flip_score_9=""
+flip_score_10=""
 
 [input]
 

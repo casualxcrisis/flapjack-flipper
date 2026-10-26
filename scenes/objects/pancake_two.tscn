@@ -22,7 +22,7 @@ mesh = SubResource("CylinderMesh_paa45")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0016525537, 0)
 shape = SubResource("CylinderShape3D_axl34")
 
-[node name="FlipScore" type="Area3D" parent="." unique_id=1956011830 groups=["flip_score_1"]]
+[node name="FlipScore" type="Area3D" parent="." unique_id=1956011830 groups=["flip_score_2"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FlipScore" unique_id=845327110]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16497302, 0)

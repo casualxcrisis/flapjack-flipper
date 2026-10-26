@@ -19,7 +19,7 @@ mesh = SubResource("SphereMesh_kps3k")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=768533553]
 shape = SubResource("ConvexPolygonShape3D_f1uh7")
 
-[node name="FlipScore" type="Area3D" parent="." unique_id=1248814053 groups=["flip_score_1"]]
+[node name="FlipScore" type="Area3D" parent="." unique_id=1248814053 groups=["flip_score_4"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FlipScore" unique_id=983758581]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.030958384, 0)
