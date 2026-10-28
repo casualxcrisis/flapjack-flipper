@@ -1,5 +1,11 @@
 [gd_scene format=3 uid="uid://02u7go8rvwq5"]
 
+[ext_resource type="Texture2D" uid="uid://cn7gla0s3qhdi" path="res://assets/textures/backed-fresh-healthy-dessert-pancake-texture-macro-closeup-photo.jpg" id="1_rb80t"]
+[ext_resource type="Script" uid="uid://bgyiqyprfmpgw" path="res://assets/scripts/objects/cullcake_zone_cake_6.gd" id="2_cp3km"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cp3km"]
+albedo_texture = ExtResource("1_rb80t")
+
 [sub_resource type="TorusMesh" id="TorusMesh_0yd1l"]
 inner_radius = 0.11
 outer_radius = 0.511
@@ -9,11 +15,15 @@ points = PackedVector3Array(-0.5010162, 0.03355753, -0.07827142, 0.5002928, 0.01
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_0yd1l"]
 height = 0.07
-radius = 0.1
+radius = 0.295
 
-[node name="PancakeSix" type="RigidBody3D" unique_id=1111980772]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kps3k"]
+height = 1.72
+
+[node name="PancakeSix" type="RigidBody3D" unique_id=1111980772 groups=["cullcake_6"]]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=725860553]
+material_override = SubResource("StandardMaterial3D_cp3km")
 mesh = SubResource("TorusMesh_0yd1l")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2114822271]
@@ -22,5 +32,15 @@ shape = SubResource("ConvexPolygonShape3D_a06ea")
 [node name="FlipScore" type="Area3D" parent="." unique_id=761976038 groups=["flip_score_6"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FlipScore" unique_id=633089505]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1819529, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19140702, 0)
 shape = SubResource("CylinderShape3D_0yd1l")
+
+[node name="CullcakeZone" type="Area3D" parent="." unique_id=1430726579]
+script = ExtResource("2_cp3km")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CullcakeZone" unique_id=1612751407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.78056145, 0)
+shape = SubResource("CylinderShape3D_kps3k")
+debug_color = Color(0.7666758, 0.44605553, 0.1057029, 0.41960785)
+
+[connection signal="body_entered" from="CullcakeZone" to="CullcakeZone" method="_on_body_entered"]

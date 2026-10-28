@@ -25,7 +25,7 @@ albedo_texture = ExtResource("4_5tt2p")
 height = 0.15348388
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_kps3k"]
-height = 0.085
+height = 0.65
 radius = 0.435
 
 [node name="PlayerController" type="CharacterBody3D" unique_id=1848464302]
@@ -59,12 +59,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.018291682, 0)
 script = ExtResource("5_5tt2p")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ArmPivot/CharacterBody3D/FlipZone" unique_id=1629163009]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015414417, -0.032201976, -1.0094435)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015414417, -0.15941343, -1.0094435)
 shape = SubResource("CylinderShape3D_kps3k")
 debug_color = Color(0.9005235, 0.2995936, 0.23283496, 0.41960785)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1819879716]
-transform = Transform3D(1, 0, 0, 0, 0.99850214, 0.054713666, 0, -0.054713666, 0.99850214, 0, 0.6642064, 0)
+transform = Transform3D(1, 0, 0, 0, 0.98663235, 0.16296192, 0, -0.16296192, 0.98663235, 0, 0.79919535, 0)
 fov = 60.9
 
 [connection signal="area_entered" from="ArmPivot/CharacterBody3D/FlipZone" to="ArmPivot/CharacterBody3D/FlipZone" method="_on_area_entered"]

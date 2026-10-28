@@ -1,24 +1,44 @@
 [gd_scene format=3 uid="uid://bhirsi31ifxyo"]
 
+[ext_resource type="Texture2D" uid="uid://cn7gla0s3qhdi" path="res://assets/textures/backed-fresh-healthy-dessert-pancake-texture-macro-closeup-photo.jpg" id="1_ghl3b"]
+[ext_resource type="Script" uid="uid://bgrfjgpxopt6e" path="res://assets/scripts/objects/cullcake_zone_cake_3.gd" id="2_pgcxo"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_kps3k"]
 size = Vector3(0.5, 0.285, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cff3v"]
+albedo_texture = ExtResource("1_ghl3b")
 
 [sub_resource type="BoxMesh" id="BoxMesh_0yd1l"]
 size = Vector3(0.5, 0.29, 0.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0yd1l"]
-size = Vector3(0.07, 0.02, 0.065)
+size = Vector3(0.175, 0.14, 0.21)
 
-[node name="PancakeThree" type="RigidBody3D" unique_id=839046052]
+[sub_resource type="BoxShape3D" id="BoxShape3D_sc5ad"]
+size = Vector3(0.82, 0.905, 0.55)
+
+[node name="PancakeThree" type="RigidBody3D" unique_id=839046052 groups=["cullcake_3"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1378747492]
 shape = SubResource("BoxShape3D_kps3k")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=380315345]
+material_override = SubResource("StandardMaterial3D_cff3v")
 mesh = SubResource("BoxMesh_0yd1l")
 
 [node name="FlipScore" type="Area3D" parent="." unique_id=816040870 groups=["flip_score_3"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FlipScore" unique_id=1598230354]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15379402, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.053357854, 0.21610534, -0.007922165)
 shape = SubResource("BoxShape3D_0yd1l")
+
+[node name="CullcakeZone" type="Area3D" parent="." unique_id=182589093]
+script = ExtResource("2_pgcxo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CullcakeZone" unique_id=2012060571]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.17239931, 0)
+shape = SubResource("BoxShape3D_sc5ad")
+debug_color = Color(0.7862744, 0.43201214, 0.04896, 0.41960785)
+
+[connection signal="body_entered" from="CullcakeZone" to="CullcakeZone" method="_on_body_entered"]

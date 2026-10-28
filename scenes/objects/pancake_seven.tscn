@@ -1,5 +1,11 @@
 [gd_scene format=3 uid="uid://jr0epwb82i7y"]
 
+[ext_resource type="Texture2D" uid="uid://cn7gla0s3qhdi" path="res://assets/textures/backed-fresh-healthy-dessert-pancake-texture-macro-closeup-photo.jpg" id="1_vjibe"]
+[ext_resource type="Script" uid="uid://daetpd7iqivur" path="res://assets/scripts/objects/cullcake_zone_cake_7.gd" id="2_v1vm5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v1vm5"]
+albedo_texture = ExtResource("1_vjibe")
+
 [sub_resource type="PrismMesh" id="PrismMesh_m2rog"]
 size = Vector3(0.74, 0.69, 0.105)
 
@@ -7,12 +13,16 @@ size = Vector3(0.74, 0.69, 0.105)
 points = PackedVector3Array(-0.37587303, -0.35087302, -0.05837302, 0.010387738, 0.31436506, 0.0525, -0.37587303, -0.35087302, 0.059087306, 0.37587303, -0.35087302, -0.05837302, -0.010530037, 0.31865078, -0.0525, 0.37587303, -0.35087302, 0.059087306, -0.37587303, -0.32734874, 0.059087306, 0.010530037, 0.31865078, -0.0525, 0.37587303, -0.32734874, 0.059087306, -0.010387738, 0.31436506, 0.0525)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0yd1l"]
-size = Vector3(0.06, 0.02, 0.105)
+size = Vector3(0.06, 0.115, 0.105)
 
-[node name="PancakeSeven" type="RigidBody3D" unique_id=1937346783]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_0yd1l"]
+height = 1.25
+
+[node name="PancakeSeven" type="RigidBody3D" unique_id=1937346783 groups=["cullcake_7"]]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1482763487]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_v1vm5")
 mesh = SubResource("PrismMesh_m2rog")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=734947165]
@@ -22,5 +32,15 @@ shape = SubResource("ConvexPolygonShape3D_q6yj4")
 [node name="FlipScore" type="Area3D" parent="." unique_id=1569842461 groups=["flip_score_7"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FlipScore" unique_id=330147318]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.055869594, -0.10456383)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1103304, -0.10456383)
 shape = SubResource("BoxShape3D_0yd1l")
+
+[node name="CullcakeZone" type="Area3D" parent="." unique_id=922062534]
+script = ExtResource("2_v1vm5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CullcakeZone" unique_id=838303839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.70695305, 0)
+shape = SubResource("CylinderShape3D_0yd1l")
+debug_color = Color(0.7397102, 0.46630073, 0.069411136, 0.41960785)
+
+[connection signal="body_entered" from="CullcakeZone" to="CullcakeZone" method="_on_body_entered"]

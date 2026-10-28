@@ -1,5 +1,10 @@
 [gd_scene format=3 uid="uid://1p1vlowr2e7p"]
 
+[ext_resource type="Texture2D" uid="uid://cn7gla0s3qhdi" path="res://assets/textures/backed-fresh-healthy-dessert-pancake-texture-macro-closeup-photo.jpg" id="1_j34bs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ma5eh"]
+albedo_texture = ExtResource("1_j34bs")
+
 [sub_resource type="SphereMesh" id="SphereMesh_kps3k"]
 radius = 0.315
 height = 0.09
@@ -11,10 +16,11 @@ points = PackedVector3Array(0.056641232, 0.009384912, 0.3023233, -0.056613285, -
 height = 0.015
 radius = 0.04
 
-[node name="PancakeOne" type="RigidBody3D" unique_id=412852835]
+[node name="PancakeOne" type="RigidBody3D" unique_id=412852835 groups=["cullcake_1"]]
 continuous_cd = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1742129428]
+material_override = SubResource("StandardMaterial3D_ma5eh")
 mesh = SubResource("SphereMesh_kps3k")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=793224521]
