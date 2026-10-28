@@ -8,7 +8,7 @@ depth = 0.18
 points = PackedVector3Array(0.35918412, 0.06343492, 0.09427619, -0.3555841, -0.070584126, -0.095584124, -0.3555841, 0.06343492, -0.095584124, -0.3555841, -0.070584126, 0.09427619, 0.3294021, -0.065, -0.08767328, -0.3555841, 0.06343492, 0.09427619, 0.35918412, 0.06343492, -0.095584124, 0.3294021, -0.065, 0.08636534)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0yd1l"]
-size = Vector3(0.515, 0.045, 0.095)
+size = Vector3(0.1, 0.01, 0.075)
 
 [node name="PancakeNine" type="RigidBody3D" unique_id=1381822989]
 
@@ -21,5 +21,5 @@ shape = SubResource("ConvexPolygonShape3D_mv5ia")
 [node name="FlipScore" type="Area3D" parent="." unique_id=2073729593 groups=["flip_score_9"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FlipScore" unique_id=1964535609]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07398707, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06321472, 0)
 shape = SubResource("BoxShape3D_0yd1l")

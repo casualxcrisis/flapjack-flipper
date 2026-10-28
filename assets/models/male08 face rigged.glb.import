@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dvfhdicwin7l7"
-path="res://.godot/imported/big_head_cromulons_from_rick_and_morty.glb-2cc1fc22ea8f273295ce04e67632fe67.scn"
+uid="uid://bujp8dv1kglem"
+path="res://.godot/imported/male08 face rigged.glb-bad3f271abc1313781080dbe1488b458.scn"
 
 [deps]
 
-source_file="res://assets/models/big_head_cromulons_from_rick_and_morty.glb"
-dest_files=["res://.godot/imported/big_head_cromulons_from_rick_and_morty.glb-2cc1fc22ea8f273295ce04e67632fe67.scn"]
+source_file="res://assets/models/male08 face rigged.glb"
+dest_files=["res://.godot/imported/male08 face rigged.glb-bad3f271abc1313781080dbe1488b458.scn"]
 
 [params]
 

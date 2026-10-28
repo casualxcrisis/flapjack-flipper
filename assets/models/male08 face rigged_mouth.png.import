@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3i56yo6nwcfr"
-path.s3tc="res://.godot/imported/big_head_cromulons_from_rick_and_morty_0.png-780d824c99208bfb024121bfe7e07763.s3tc.ctex"
+uid="uid://crinvrn1yvalb"
+path.s3tc="res://.godot/imported/male08 face rigged_mouth.png-859d5d063b42d53e23b7d176a2dceb92.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "f8436abd3793c472406ae36b6b610e96"
+"md5": "2ab697d34e3531335bf2da99e15ff2b9"
 }
 
 [deps]
 
-source_file="res://assets/models/big_head_cromulons_from_rick_and_morty_0.png"
-dest_files=["res://.godot/imported/big_head_cromulons_from_rick_and_morty_0.png-780d824c99208bfb024121bfe7e07763.s3tc.ctex"]
+source_file="res://assets/models/male08 face rigged_mouth.png"
+dest_files=["res://.godot/imported/male08 face rigged_mouth.png-859d5d063b42d53e23b7d176a2dceb92.s3tc.ctex"]
 
 [params]
 

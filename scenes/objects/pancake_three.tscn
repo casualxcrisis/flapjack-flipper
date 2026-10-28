@@ -7,7 +7,7 @@ size = Vector3(0.5, 0.285, 0.5)
 size = Vector3(0.5, 0.29, 0.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0yd1l"]
-size = Vector3(0.36, 0.07, 0.365)
+size = Vector3(0.07, 0.02, 0.065)
 
 [node name="PancakeThree" type="RigidBody3D" unique_id=839046052]
 
@@ -20,5 +20,5 @@ mesh = SubResource("BoxMesh_0yd1l")
 [node name="FlipScore" type="Area3D" parent="." unique_id=816040870 groups=["flip_score_3"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FlipScore" unique_id=1598230354]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18167508, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15379402, 0)
 shape = SubResource("BoxShape3D_0yd1l")
