@@ -36,7 +36,7 @@ shape = SubResource("CylinderShape3D_axl34")
 [node name="FlipScore" type="Area3D" parent="." unique_id=1956011830 groups=["flip_score_2"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FlipScore" unique_id=845327110]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008103684, 0.1905548, 0.02002883)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008103684, 0.11872235, 0.02002883)
 shape = SubResource("CylinderShape3D_kps3k")
 
 [node name="CullcakeZone" type="Area3D" parent="." unique_id=878035487]

@@ -23,6 +23,7 @@ albedo_texture = ExtResource("4_5tt2p")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_0yd1l"]
 height = 0.15348388
+radius = 0.455
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_kps3k"]
 height = 0.65
@@ -51,7 +52,7 @@ surface_material_override/1 = SubResource("StandardMaterial3D_m7hbg")
 surface_material_override/2 = SubResource("StandardMaterial3D_2k8ub")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ArmPivot/CharacterBody3D" unique_id=789632929]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004939735, -0.05793032, -1.0236173)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004939735, -0.005088955, -1.0236173)
 shape = SubResource("CylinderShape3D_0yd1l")
 
 [node name="FlipZone" type="Area3D" parent="ArmPivot/CharacterBody3D" unique_id=1901044257]
