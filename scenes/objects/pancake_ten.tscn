@@ -1,5 +1,14 @@
 [gd_scene format=3 uid="uid://bwcqni2qgu5bp"]
 
+[ext_resource type="Texture2D" uid="uid://cn7gla0s3qhdi" path="res://assets/textures/backed-fresh-healthy-dessert-pancake-texture-macro-closeup-photo.jpg" id="1_4gmph"]
+[ext_resource type="Script" uid="uid://jm7m5wrjvsc1" path="res://assets/scripts/objects/cullcake_zone_cake_10.gd" id="2_dcebr"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4n8tn"]
+friction = 0.52
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dcebr"]
+albedo_texture = ExtResource("1_4gmph")
+
 [sub_resource type="SphereMesh" id="SphereMesh_kps3k"]
 radius = 0.315
 height = 0.09
@@ -11,10 +20,17 @@ points = PackedVector3Array(0.056641232, 0.009384912, 0.3023233, -0.056613285, -
 height = 0.075
 radius = 0.335
 
-[node name="PancakeOne" type="RigidBody3D" unique_id=412852835]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_0yd1l"]
+height = 0.62
+radius = 0.33
+
+[node name="PancakeTen" type="RigidBody3D" unique_id=412852835 groups=["cullcake_10"]]
+mass = 0.234
+physics_material_override = SubResource("PhysicsMaterial_4n8tn")
 continuous_cd = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1742129428]
+material_override = SubResource("StandardMaterial3D_dcebr")
 mesh = SubResource("SphereMesh_kps3k")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1434687828]
@@ -25,3 +41,13 @@ shape = SubResource("ConvexPolygonShape3D_gisp0")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FlipScore" unique_id=331602227]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0044507384, 0.009861976, -0.00913699)
 shape = SubResource("CylinderShape3D_kps3k")
+
+[node name="CullcakeZone" type="Area3D" parent="." unique_id=521141235]
+script = ExtResource("2_dcebr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CullcakeZone" unique_id=1038328973]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.302662, 0)
+shape = SubResource("CylinderShape3D_0yd1l")
+debug_color = Color(0.7967164, 0.42138872, 0.12490418, 0.41960785)
+
+[connection signal="body_entered" from="CullcakeZone" to="CullcakeZone" method="_on_body_entered"]

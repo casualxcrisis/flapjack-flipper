@@ -21,8 +21,11 @@ albedo_texture = ExtResource("4_5tt2p")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2k8ub"]
 albedo_texture = ExtResource("4_5tt2p")
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5tt2p"]
+points = PackedVector3Array(92.12487, 11.476468, -8.680488, 250.98819, 35.79127, 9.277125, 268.38995, 29.99106, 9.277125, 91.97162, 11.455328, 10.412225, 250.98819, 12.590427, -8.1235075, 129.22519, 35.79127, -8.1235075, 250.98819, 35.79127, -8.1235075, 100.20029, 29.99106, 9.277125, 233.58641, 12.590427, 9.277125, 198.78287, 29.99106, -13.923718, 140.8154, 35.79127, 9.277125, 268.38995, 18.390638, -8.1235075, 100.20029, 29.99106, -8.1235075, 175.61893, 18.390638, -13.923718, 268.38995, 18.390638, 9.277125, 268.38995, 29.99106, -8.1235075, 111.82342, 35.79127, 3.4769144, 250.98819, 12.590427, 3.4769144, 198.78287, 24.19085, -13.923718, 111.82342, 35.79127, -2.3232965)
+
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_0yd1l"]
-height = 0.15348388
+height = 0.528
 radius = 0.455
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_kps3k"]
@@ -51,8 +54,12 @@ surface_material_override/0 = SubResource("StandardMaterial3D_5afdu")
 surface_material_override/1 = SubResource("StandardMaterial3D_m7hbg")
 surface_material_override/2 = SubResource("StandardMaterial3D_2k8ub")
 
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ArmPivot/CharacterBody3D" unique_id=1874974603]
+transform = Transform3D(-2.1855694e-10, 0, -0.005, 0, 0.005, 0, 0.005, 0, -2.1855694e-10, 0, 0, -1.0151169)
+shape = SubResource("ConvexPolygonShape3D_5tt2p")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ArmPivot/CharacterBody3D" unique_id=789632929]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004939735, -0.005088955, -1.0236173)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004939735, -0.21441147, -1.0236173)
 shape = SubResource("CylinderShape3D_0yd1l")
 
 [node name="FlipZone" type="Area3D" parent="ArmPivot/CharacterBody3D" unique_id=1901044257]
