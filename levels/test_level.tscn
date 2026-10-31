@@ -239,6 +239,7 @@ spot_angle = 38.33
 
 [node name="BackgroundMusic" type="AudioStreamPlayer3D" parent="." unique_id=1924787988]
 stream = ExtResource("11_wkb0e")
+volume_db = -13.458
 autoplay = true
 
 [node name="PancakeSpawn" type="AudioStreamPlayer3D" parent="." unique_id=1391214392]

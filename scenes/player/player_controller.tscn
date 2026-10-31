@@ -79,6 +79,7 @@ fov = 60.9
 [node name="Sizzle" type="AudioStreamPlayer3D" parent="." unique_id=1698363387]
 unique_name_in_owner = true
 stream = ExtResource("6_5afdu")
+volume_db = -26.916
 
 [connection signal="area_entered" from="ArmPivot/CharacterBody3D/FlipZone" to="ArmPivot/CharacterBody3D/FlipZone" method="_on_area_entered"]
 [connection signal="area_exited" from="ArmPivot/CharacterBody3D/FlipZone" to="ArmPivot/CharacterBody3D/FlipZone" method="_on_area_exited"]
