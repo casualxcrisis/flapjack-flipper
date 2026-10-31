@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://btpr8cxxhsb1r" path="res://assets/textures/8060763.png" id="8_wndkh"]
 [ext_resource type="PackedScene" uid="uid://da25wfsdb56jn" path="res://scenes/objects/head.tscn" id="9_4n8tn"]
 [ext_resource type="Texture2D" uid="uid://btnl8tdhsy1sq" path="res://assets/textures/most-popular-suspended-nd-fissured-surf-ceiling-tiles-1195mm-x-595mm-full-box.-632-p.jpg" id="9_ly3hx"]
+[ext_resource type="AudioStream" uid="uid://cfkaeq2t5cge3" path="res://assets/music/Five_Loop_01.wav" id="11_wkb0e"]
+[ext_resource type="AudioStream" uid="uid://2uar0c1khmt6" path="res://assets/sfx/714258__qubodup__cloud-poof.wav" id="12_paa45"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wndkh"]
 albedo_texture = ExtResource("4_ur00s")
@@ -225,7 +227,7 @@ mesh_data = SubResource("Resource_o5yuq")
 collision_mode = 1
 
 [node name="male08 face rigged" parent="." unique_id=1303001174 instance=ExtResource("9_4n8tn")]
-transform = Transform3D(-16.143642, 0, 1.664368e-06, 0, 14.961527, 0, -2.4376222e-06, 0, -11.022612, -0.057112217, -23.390856, 7.4120855)
+transform = Transform3D(-16.143642, 0, 1.664368e-06, 0, 14.961527, 0, -2.4376222e-06, 0, -11.022612, -0.057112217, -23.390856, 17.96476)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=866816666]
 transform = Transform3D(-1, 0, -5.960464e-08, -1.7377047e-08, 0.9565591, 0.2915385, 5.7015363e-08, 0.2915385, -0.9565591, -0.06894839, 6.926547, 3.9009905)
@@ -234,5 +236,15 @@ light_size = 0.352
 spot_range = 7.938
 spot_attenuation = -1.3
 spot_angle = 38.33
+
+[node name="BackgroundMusic" type="AudioStreamPlayer3D" parent="." unique_id=1924787988]
+stream = ExtResource("11_wkb0e")
+autoplay = true
+
+[node name="PancakeSpawn" type="AudioStreamPlayer3D" parent="." unique_id=1391214392]
+unique_name_in_owner = true
+stream = ExtResource("12_paa45")
+volume_db = -17.944
+pitch_scale = 0.85
 
 [connection signal="body_entered" from="FloorCull" to="FloorCull" method="_on_body_entered"]

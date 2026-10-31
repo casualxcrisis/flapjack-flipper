@@ -47,3 +47,9 @@ func _on_area_exited(area: Area3D) -> void:
 		print(Global.pancake_counter)
 	elif area.is_in_group("flip_score_9"):
 		Global.pancake_counter = 8
+
+
+func _on_body_entered(body: Node3D) -> void:
+	if body.is_in_group("sizzle"):
+		%Sizzle.play()
+		

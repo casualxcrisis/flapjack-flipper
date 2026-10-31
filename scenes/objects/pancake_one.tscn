@@ -29,5 +29,5 @@ shape = SubResource("ConvexPolygonShape3D_d5i48")
 [node name="FlipScore" type="Area3D" parent="." unique_id=1424422795 groups=["flip_score_1"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FlipScore" unique_id=331602227]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.051336497, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.092758596, 0)
 shape = SubResource("CylinderShape3D_kps3k")

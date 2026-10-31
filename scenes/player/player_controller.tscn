@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://di2m4fkd8fvj0" path="res://assets/textures/Material.001_Base_Color.png" id="3_0nonk"]
 [ext_resource type="Texture2D" uid="uid://dwwyh77k3r4bq" path="res://assets/textures/Material.002_Base_Color.png" id="4_5tt2p"]
 [ext_resource type="Script" uid="uid://ll28s23dv6n6" path="res://assets/scripts/player/flip_zone.gd" id="5_5tt2p"]
+[ext_resource type="AudioStream" uid="uid://cr4iqc8h36h3o" path="res://assets/sfx/sizzle_edited.wav" id="6_5afdu"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0yd1l"]
 radius = 0.06
@@ -67,7 +68,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.018291682, 0)
 script = ExtResource("5_5tt2p")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ArmPivot/CharacterBody3D/FlipZone" unique_id=1629163009]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015414417, -0.15941343, -1.0094435)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015414417, -0.22182086, -1.0094435)
 shape = SubResource("CylinderShape3D_kps3k")
 debug_color = Color(0.9005235, 0.2995936, 0.23283496, 0.41960785)
 
@@ -75,5 +76,10 @@ debug_color = Color(0.9005235, 0.2995936, 0.23283496, 0.41960785)
 transform = Transform3D(1, 0, 0, 0, 0.98663235, 0.16296192, 0, -0.16296192, 0.98663235, 0, 0.79919535, 0)
 fov = 60.9
 
+[node name="Sizzle" type="AudioStreamPlayer3D" parent="." unique_id=1698363387]
+unique_name_in_owner = true
+stream = ExtResource("6_5afdu")
+
 [connection signal="area_entered" from="ArmPivot/CharacterBody3D/FlipZone" to="ArmPivot/CharacterBody3D/FlipZone" method="_on_area_entered"]
 [connection signal="area_exited" from="ArmPivot/CharacterBody3D/FlipZone" to="ArmPivot/CharacterBody3D/FlipZone" method="_on_area_exited"]
+[connection signal="body_entered" from="ArmPivot/CharacterBody3D/FlipZone" to="ArmPivot/CharacterBody3D/FlipZone" method="_on_body_entered"]
