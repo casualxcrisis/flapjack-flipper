@@ -12,7 +12,8 @@ func _process(delta: float) -> void:
 		move_head = true
 		await get_tree().create_timer(14).timeout
 		move_head = false
-	elif Global.head_pancake_exit >= 2:
+	
+	if Global.head_pancake_exit >= 1:
 		exit_head = true
 
 	#moving the head in and out
