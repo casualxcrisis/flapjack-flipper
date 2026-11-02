@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dwwyh77k3r4bq" path="res://assets/textures/Material.002_Base_Color.png" id="4_5tt2p"]
 [ext_resource type="Script" uid="uid://ll28s23dv6n6" path="res://assets/scripts/player/flip_zone.gd" id="5_5tt2p"]
 [ext_resource type="AudioStream" uid="uid://cr4iqc8h36h3o" path="res://assets/sfx/sizzle_edited.wav" id="6_5afdu"]
+[ext_resource type="AudioStream" uid="uid://ct0uayvh406n4" path="res://assets/sfx/365794__zagi2__fear.wav" id="7_m7hbg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0yd1l"]
 radius = 0.06
@@ -81,6 +82,11 @@ fov = 60.9
 unique_name_in_owner = true
 stream = ExtResource("6_5afdu")
 volume_db = -10.467
+
+[node name="HeadEntrance" type="AudioStreamPlayer3D" parent="." unique_id=1957192763]
+unique_name_in_owner = true
+stream = ExtResource("7_m7hbg")
+volume_db = -30.659
 
 [connection signal="area_entered" from="ArmPivot/CharacterBody3D/FlipZone" to="ArmPivot/CharacterBody3D/FlipZone" method="_on_area_entered"]
 [connection signal="area_exited" from="ArmPivot/CharacterBody3D/FlipZone" to="ArmPivot/CharacterBody3D/FlipZone" method="_on_area_exited"]
