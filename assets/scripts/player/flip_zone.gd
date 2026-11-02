@@ -77,3 +77,4 @@ func _on_body_entered(body: Node3D) -> void:
 		Global.head_pancake_enter = 1
 		print(Global.head_pancake_enter)
 		
+		

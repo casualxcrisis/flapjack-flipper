@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://bujp8dv1kglem" path="res://assets/models/male08 face rigged.glb" id="1_n7psp"]
 [ext_resource type="Script" uid="uid://b7k5bwv3u863k" path="res://assets/scripts/objects/mouth_score.gd" id="2_3d0n3"]
 [ext_resource type="Script" uid="uid://dfbkqpm2rq4hx" path="res://assets/scripts/objects/head.gd" id="2_r3he5"]
+[ext_resource type="AudioStream" uid="uid://ieg31x2p5kr8" path="res://assets/sfx/531755__magnuswaker__gulp-hard-swallow.wav" id="4_ue3n0"]
+[ext_resource type="AudioStream" uid="uid://5oevnxwgjp48" path="res://assets/sfx/nonext.wav" id="5_qclmr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0yd1l"]
 size = Vector3(0.054163814, 0.07794094, 0.035186768)
@@ -24,5 +26,13 @@ script = ExtResource("2_3d0n3")
 transform = Transform3D(1, 0, 0, 0, 0.97703105, -0.21309687, 0, 0.21309687, 0.97703105, 0.00092038885, 1.6832099, 0.08430639)
 shape = SubResource("BoxShape3D_0yd1l")
 debug_color = Color(0.7403216, 0.4668092, 0.0048234714, 0.41960785)
+
+[node name="Gulp" type="AudioStreamPlayer3D" parent="." index="3" unique_id=1751078126]
+unique_name_in_owner = true
+stream = ExtResource("4_ue3n0")
+
+[node name="NoNext" type="AudioStreamPlayer3D" parent="." index="4" unique_id=262560676]
+unique_name_in_owner = true
+stream = ExtResource("5_qclmr")
 
 [connection signal="body_entered" from="MouthScore" to="MouthScore" method="_on_body_entered"]
