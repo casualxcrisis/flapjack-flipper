@@ -2,13 +2,16 @@
 
 [ext_resource type="PackedScene" uid="uid://bujp8dv1kglem" path="res://assets/models/male08 face rigged.glb" id="1_n7psp"]
 [ext_resource type="Script" uid="uid://b7k5bwv3u863k" path="res://assets/scripts/objects/mouth_score.gd" id="2_3d0n3"]
+[ext_resource type="Script" uid="uid://dfbkqpm2rq4hx" path="res://assets/scripts/objects/head.gd" id="2_r3he5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0yd1l"]
-size = Vector3(0.084331036, 0.0451622, 0.055725098)
+size = Vector3(0.054163814, 0.07794094, 0.035186768)
 
 [node name="male08 face rigged" unique_id=1303001174 instance=ExtResource("1_n7psp")]
+script = ExtResource("2_r3he5")
 
 [node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(895616253) index="0" unique_id=914289780]
+bones/11/position = Vector3(0, -0.044, 0.017)
 bones/67/rotation = Quaternion(0.683017, 0.028696, -0.046061, 0.847498)
 bones/68/rotation = Quaternion(0.683017, -0.028007, 0.044955, 0.847558)
 
@@ -18,7 +21,7 @@ bones/68/rotation = Quaternion(0.683017, -0.028007, 0.044955, 0.847558)
 script = ExtResource("2_3d0n3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MouthScore" index="0" unique_id=1337017982]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0012591742, 1.7273977, 0.094575554)
+transform = Transform3D(1, 0, 0, 0, 0.97703105, -0.21309687, 0, 0.21309687, 0.97703105, 0.00092038885, 1.6832099, 0.08430639)
 shape = SubResource("BoxShape3D_0yd1l")
 debug_color = Color(0.7403216, 0.4668092, 0.0048234714, 0.41960785)
 

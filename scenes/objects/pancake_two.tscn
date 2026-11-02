@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://l05a8cbtsbkn"]
 
 [ext_resource type="Texture2D" uid="uid://cn7gla0s3qhdi" path="res://assets/textures/backed-fresh-healthy-dessert-pancake-texture-macro-closeup-photo.jpg" id="1_2y3ch"]
+[ext_resource type="Script" uid="uid://bh578l2yeeq5f" path="res://assets/scripts/objects/pancake_spawn_in.gd" id="1_cfiq7"]
 [ext_resource type="Script" uid="uid://jk1db0tccdm7" path="res://assets/scripts/objects/cullcake_zone_cake_2.gd" id="2_78fda"]
+[ext_resource type="Texture2D" uid="uid://cp5ha1gbdr80x" path="res://assets/textures/T_smoke_flipbook.png" id="4_dkohw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_78fda"]
 albedo_texture = ExtResource("1_2y3ch")
@@ -16,16 +18,39 @@ height = 0.225
 radius = 0.315
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_kps3k"]
-height = 0.155
-radius = 0.265
+height = 0.22264649
+radius = 0.065
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_0yd1l"]
 height = 1.0
 radius = 0.375
 
-[node name="PancakeTwo" type="RigidBody3D" unique_id=996950828 groups=["cullcake_2"]]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aews0"]
+transparency = 1
+albedo_texture = ExtResource("4_dkohw")
+billboard_mode = 3
+particles_anim_h_frames = 8
+particles_anim_v_frames = 8
+particles_anim_loop = false
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1313698353]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vvyjd"]
+particle_flag_rotate_y = true
+emission_shape = 1
+emission_sphere_radius = 0.1
+angle_min = -179.99998
+angle_max = 180.00002
+gravity = Vector3(0, 0, 0)
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_l763n"]
+
+[node name="PancakeTwo" type="RigidBody3D" unique_id=996950828 groups=["cullcake_2"]]
+script = ExtResource("1_cfiq7")
+
+[node name="CakeMesh" type="MeshInstance3D" parent="." unique_id=1313698353]
+unique_name_in_owner = true
+visible = false
 material_override = SubResource("StandardMaterial3D_78fda")
 mesh = SubResource("CylinderMesh_paa45")
 
@@ -36,7 +61,7 @@ shape = SubResource("CylinderShape3D_axl34")
 [node name="FlipScore" type="Area3D" parent="." unique_id=1956011830 groups=["flip_score_2"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FlipScore" unique_id=845327110]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008103684, 0.11872235, 0.02002883)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008103684, 0.17453629, -0.006722495)
 shape = SubResource("CylinderShape3D_kps3k")
 
 [node name="CullcakeZone" type="Area3D" parent="." unique_id=878035487]
@@ -46,5 +71,13 @@ script = ExtResource("2_78fda")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.53544796, 0)
 shape = SubResource("CylinderShape3D_0yd1l")
 debug_color = Color(0.8274871, 0.3964015, 0.0061062523, 0.41960785)
+
+[node name="VFXSmoke" type="GPUParticles3D" parent="." unique_id=2026750635]
+unique_name_in_owner = true
+material_override = SubResource("StandardMaterial3D_aews0")
+emitting = false
+amount = 1
+process_material = SubResource("ParticleProcessMaterial_vvyjd")
+draw_pass_1 = SubResource("QuadMesh_l763n")
 
 [connection signal="body_entered" from="CullcakeZone" to="CullcakeZone" method="_on_body_entered"]

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d0qofj3m4dypq"]
+
+[ext_resource type="PackedScene" uid="uid://da25wfsdb56jn" path="res://scenes/objects/head.tscn" id="1_b170n"]
+[ext_resource type="Script" uid="uid://dftjgllk83ee0" path="res://assets/scripts/objects/head_mover.gd" id="1_e87xs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kps3k"]
+size = Vector3(1, 0.28125, 0.2434082)
+
+[node name="HeadMover" type="RigidBody3D" unique_id=1348349318]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_e87xs")
+
+[node name="male08 face rigged" parent="." unique_id=1303001174 instance=ExtResource("1_b170n")]
+transform = Transform3D(14.685, 0, 0, 0, 14.685, 0, 0, 0, 14.685, 0, -22.479132, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1907156562]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.016628563, 0.005004883)
+shape = SubResource("BoxShape3D_kps3k")
