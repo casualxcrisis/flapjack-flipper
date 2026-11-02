@@ -50,7 +50,7 @@ anim_speed_max = 1.0
 
 [sub_resource type="QuadMesh" id="QuadMesh_qj7ff"]
 
-[node name="PancakeTen" type="RigidBody3D" unique_id=412852835 groups=["cullcake_10"]]
+[node name="PancakeTen" type="RigidBody3D" unique_id=412852835 groups=["cullcake_10", "tencake"]]
 mass = 0.234
 physics_material_override = SubResource("PhysicsMaterial_4n8tn")
 continuous_cd = true

@@ -37,7 +37,6 @@ func _on_area_entered(area: Area3D) -> void:
 		print(Global.pancake_counter)
 	elif area.is_in_group("flip_score_9") && Global.pancake_counter == 8:
 		Global.pancake_counter = 9
-		Global.head_pancake_enter += 1
 		%Sizzle.play()
 		print(Global.pancake_counter)
 
@@ -74,4 +73,7 @@ func _on_area_exited(area: Area3D) -> void:
 func _on_body_entered(body: Node3D) -> void:
 	if body.is_in_group("sizzle"):
 		%Sizzle.play()
+	if body.is_in_group("tencake"):
+		Global.head_pancake_enter = 1
+		print(Global.head_pancake_enter)
 		
