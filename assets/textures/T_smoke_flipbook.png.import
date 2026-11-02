@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bemhk0wyat5b3"
-path.s3tc="res://.godot/imported/Grass2.png-c69e94afe3944b8cba1b3f289aa55856.s3tc.ctex"
+uid="uid://cp5ha1gbdr80x"
+path.s3tc="res://.godot/imported/T_smoke_flipbook.png-4da2b4d8d06f213b2395d61875426f13.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/ground/Grass2.png"
-dest_files=["res://.godot/imported/Grass2.png-c69e94afe3944b8cba1b3f289aa55856.s3tc.ctex"]
+source_file="res://assets/textures/T_smoke_flipbook.png"
+dest_files=["res://.godot/imported/T_smoke_flipbook.png-4da2b4d8d06f213b2395d61875426f13.s3tc.ctex"]
 
 [params]
 
