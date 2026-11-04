@@ -84,11 +84,11 @@ func _on_body_entered(body: Node3D) -> void:
 		%Sizzle.play()
 	if body.is_in_group("tencake"):
 		Global.head_pancake_enter = 1
+		Global.entrance_music += 1
 		await get_tree().create_timer(2).timeout
-		if Global.entrance_music:
+		if Global.entrance_music == 1:
 			%HeadEntrance.play()
-		await get_tree().create_timer(21).timeout
-		Global.entrance_music = false
-		print(Global.head_pancake_enter)
+			await get_tree().create_timer(21).timeout
+			%HeadEntrance.stop()
 		
 		
