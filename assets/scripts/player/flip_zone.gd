@@ -85,10 +85,19 @@ func _on_body_entered(body: Node3D) -> void:
 	if body.is_in_group("tencake"):
 		Global.head_pancake_enter = 1
 		Global.entrance_music += 1
-		await get_tree().create_timer(2).timeout
+		Global.ui_warning += 1
+		if Global.ui_warning == 1:
+			%Thump.play()
+			%DontMove.visible = true
+		
 		if Global.entrance_music == 1:
+			await get_tree().create_timer(1.2).timeout
 			%HeadEntrance.play()
-			await get_tree().create_timer(21).timeout
+			await get_tree().create_timer(19).timeout
 			%HeadEntrance.stop()
+			%DontMove.visible = false
+			%FeedHim.visible = true
+			await get_tree().create_timer(4).timeout
+			%FeedHim.visible = false
 		
 		

@@ -2,11 +2,12 @@ extends Node
 
 
 ###Pancakes##
-var pancake_counter = 8 #will determine which pancake needs to be instanced
+var pancake_counter = 0 #will determine which pancake needs to be instanced
 
 var head_pancake_enter = 0
 var head_pancake_exit = 0
 var entrance_music = 0
+var ui_warning = 0
 
 ###PANCAKES###
 var pancake_one = preload("res://scenes/objects/pancake_one.tscn")

@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://d2qxesium5y13"]
+
+[ext_resource type="Script" uid="uid://8xn1o0twabt1" path="res://assets/scripts/ui/end_game.gd" id="1_y4y5x"]
+[ext_resource type="Texture2D" uid="uid://kq2ln3d40n70" path="res://assets/textures/Screenshot_20261104_003125.png" id="2_b88aj"]
+[ext_resource type="AudioStream" uid="uid://bud5qce81586" path="res://assets/sfx/145119__gilligan_itm__fluorescent-lamp-start-9.wav" id="3_3f5ky"]
+[ext_resource type="AudioStream" uid="uid://cflya0nxgu81v" path="res://assets/sfx/452511__kyles__neon-fluorescent-store-sign-loud-buzz-close-heavy-city-tone.wav" id="4_2glt3"]
+[ext_resource type="FontFile" uid="uid://b85rwfqky6q2w" path="res://assets/fonts/HomeVideo-Bold.ttf" id="5_b88aj"]
+
+[node name="EndGame" type="Control" unique_id=1917666989]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y4y5x")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1146198407]
+layout_mode = 0
+offset_right = 2625.12
+offset_bottom = 1440.0
+scale = Vector2(0.4400003, 0.4683921)
+texture = ExtResource("2_b88aj")
+
+[node name="LightStart" type="AudioStreamPlayer2D" parent="." unique_id=2014346983]
+unique_name_in_owner = true
+stream = ExtResource("3_3f5ky")
+volume_db = -0.31
+
+[node name="LightBuzz" type="AudioStreamPlayer2D" parent="." unique_id=1535757925]
+unique_name_in_owner = true
+stream = ExtResource("4_2glt3")
+
+[node name="Thanks" type="RichTextLabel" parent="." unique_id=1034972379]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -535.0
+offset_top = -56.79001
+offset_right = 618.45996
+offset_bottom = 56.79001
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("5_b88aj")
+theme_override_font_sizes/normal_font_size = 85
+bbcode_enabled = true
+text = "[tornado radius=10.0 freq=1.0 connected=1]Thank You for Playing[/tornado]"

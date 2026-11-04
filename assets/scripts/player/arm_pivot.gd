@@ -11,4 +11,4 @@ func _unhandled_input(event: InputEvent) -> void:
 	#setting mouse rotation
 	if event is InputEventMouseMotion:
 		#flip up motion
-		arm_pivot.rotate_x(event.relative.x * 0.0004)
+		arm_pivot.rotate_x(event.relative.x * 0.0029)

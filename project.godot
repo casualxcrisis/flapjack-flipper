@@ -12,7 +12,7 @@ config_version=5
 
 config/name="The Cakerooms"
 config/description="You flip pancakes in an uncomfortable room. Can you flip them all?"
-run/main_scene="uid://06ssu3atpbbe"
+run/main_scene="uid://ctfi23fgfc805"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

@@ -13,4 +13,4 @@ func _on_body_entered(body: Node3D) -> void:
 		await get_tree().create_timer(11).timeout
 		%Goodbye.play()
 		await get_tree().create_timer(3).timeout
-		get_tree().change_scene_to_file("res://addons/psx_skyboxes_2/demo/viewer.tscn") #change to main menu
+		get_tree().change_scene_to_file("res://levels/end_game.tscn") 
