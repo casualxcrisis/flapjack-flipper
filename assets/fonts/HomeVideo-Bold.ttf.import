@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b3c46kfjbr0x0"
-path="res://.godot/imported/NotJamChunky8.ttf-22b527c3b591e9e562ac0f353b59f180.fontdata"
+uid="uid://b85rwfqky6q2w"
+path="res://.godot/imported/HomeVideo-Bold.ttf-6036f7c7c12e8d42bf1c3a545bf775d4.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/NotJamChunky8.ttf"
-dest_files=["res://.godot/imported/NotJamChunky8.ttf-22b527c3b591e9e562ac0f353b59f180.fontdata"]
+source_file="res://assets/fonts/HomeVideo-Bold.ttf"
+dest_files=["res://.godot/imported/HomeVideo-Bold.ttf-6036f7c7c12e8d42bf1c3a545bf775d4.fontdata"]
 
 [params]
 

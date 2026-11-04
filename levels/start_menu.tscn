@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://ctfi23fgfc805"]
+
+[ext_resource type="Script" uid="uid://c4boxgaqw8vpe" path="res://assets/scripts/ui/start_menu.gd" id="1_btjjm"]
+[ext_resource type="Texture2D" uid="uid://kq2ln3d40n70" path="res://assets/textures/Screenshot_20261104_003125.png" id="1_nl3ga"]
+[ext_resource type="FontFile" uid="uid://b85rwfqky6q2w" path="res://assets/fonts/HomeVideo-Bold.ttf" id="2_btjjm"]
+[ext_resource type="FontFile" uid="uid://dg344mq5t51we" path="res://assets/fonts/HomeVideo-Regular.ttf" id="3_eeffy"]
+[ext_resource type="AudioStream" uid="uid://bsmxwtnydmwyf" path="res://assets/music/Three_Loop.wav" id="5_eeffy"]
+
+[node name="StartMenu" type="Control" unique_id=1148858134]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_btjjm")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1294497488]
+layout_mode = 0
+offset_right = 2625.12
+offset_bottom = 1440.0
+scale = Vector2(0.4400003, 0.4683921)
+texture = ExtResource("1_nl3ga")
+
+[node name="Title" type="Label" parent="." unique_id=1853160458]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -346.0
+offset_top = 66.0
+offset_right = 346.0
+offset_bottom = 132.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_btjjm")
+theme_override_font_sizes/font_size = 72
+text = "The Pancake Room"
+
+[node name="StartPrompt" type="RichTextLabel" parent="." unique_id=1367368652]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -198.0
+offset_top = 342.0
+offset_right = 211.16504
+offset_bottom = 385.565
+grow_horizontal = 2
+scale = Vector2(0.985349, 0.99534214)
+theme_override_fonts/normal_font = ExtResource("3_eeffy")
+theme_override_font_sizes/normal_font_size = 45
+bbcode_enabled = true
+text = "[pulse freq=1.0]Pick up the PAN[/pulse]"
+
+[node name="MenuLoop" type="AudioStreamPlayer2D" parent="." unique_id=1494648900]
+stream = ExtResource("5_eeffy")
+autoplay = true
