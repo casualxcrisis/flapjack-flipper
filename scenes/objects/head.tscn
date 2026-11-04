@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://dfbkqpm2rq4hx" path="res://assets/scripts/objects/head.gd" id="2_r3he5"]
 [ext_resource type="AudioStream" uid="uid://ieg31x2p5kr8" path="res://assets/sfx/531755__magnuswaker__gulp-hard-swallow.wav" id="4_ue3n0"]
 [ext_resource type="AudioStream" uid="uid://5oevnxwgjp48" path="res://assets/sfx/nonext.wav" id="5_qclmr"]
+[ext_resource type="AudioStream" uid="uid://dob3uwh6xtq7y" path="res://assets/sfx/goodbyedeepstretch.wav" id="6_bsxef"]
 
 [sub_resource type="Curve" id="Curve_qclmr"]
 _limits = [-360.0, 360.0, 0.0, 1.0]
@@ -72,5 +73,10 @@ stream = ExtResource("4_ue3n0")
 [node name="NoNext" type="AudioStreamPlayer3D" parent="." index="4" unique_id=262560676]
 unique_name_in_owner = true
 stream = ExtResource("5_qclmr")
+
+[node name="Goodbye" type="AudioStreamPlayer3D" parent="." index="5" unique_id=1746393851]
+unique_name_in_owner = true
+stream = ExtResource("6_bsxef")
+volume_db = 1.403
 
 [connection signal="body_entered" from="MouthScore" to="MouthScore" method="_on_body_entered"]

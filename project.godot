@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Flapjack Simulator"
+config/name="The Cakerooms"
+config/description="You flip pancakes in an uncomfortable room. Can you flip them all?"
 run/main_scene="uid://06ssu3atpbbe"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -21,6 +22,7 @@ Global="*uid://dixqt3ql2c3c8"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
