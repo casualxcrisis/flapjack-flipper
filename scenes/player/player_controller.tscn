@@ -27,9 +27,7 @@ emission_shape_scale = Vector3(0.26, 0.02, 0.355)
 emission_shape = 3
 emission_box_extents = Vector3(1, 1, 1)
 angle_curve = SubResource("CurveTexture_cu4ke")
-gravity = Vector3(0, 0.085, 0)
-linear_accel_min = 5.3799977
-linear_accel_max = 5.3799977
+gravity = Vector3(0, 1.21, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2rjgf"]
 albedo_color = Color(0.7294118, 0.72156864, 0.42352942, 1)
@@ -80,7 +78,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.076911986, -1.0423477)
 emitting = false
 amount = 14
 amount_ratio = 0.7274
-lifetime = 0.36
+lifetime = 0.6900000000000001
 one_shot = true
 speed_scale = 2.03
 explosiveness = 0.54
