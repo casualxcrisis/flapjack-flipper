@@ -14,6 +14,31 @@ radius = 0.06
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_kps3k"]
 radius = 0.06
 
+[sub_resource type="Curve" id="Curve_m7hbg"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.16216217, 246.74164), 0.0, 0.0, 0, 0, Vector2(0.41891897, 4.044983), 0.0, 0.0, 0, 0, Vector2(0.49324334, 295.28094), 0.0, 0.0, 0, 0, Vector2(0.67567575, 222.47195), 0.0, 0.0, 0, 0, Vector2(0.89189196, 335.7304), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 7
+
+[sub_resource type="CurveTexture" id="CurveTexture_cu4ke"]
+curve = SubResource("Curve_m7hbg")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2k8ub"]
+emission_shape_scale = Vector3(0.26, 0.02, 0.355)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+angle_curve = SubResource("CurveTexture_cu4ke")
+gravity = Vector3(0, 0.085, 0)
+linear_accel_min = 5.3799977
+linear_accel_max = 5.3799977
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2rjgf"]
+albedo_color = Color(0.7294118, 0.72156864, 0.42352942, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_rkuj1"]
+material = SubResource("StandardMaterial3D_2rjgf")
+radius = 0.01
+height = 0.02
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5afdu"]
 albedo_texture = ExtResource("3_0nonk")
 
@@ -48,6 +73,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1524603)
 script = ExtResource("1_iivv4")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="ArmPivot" unique_id=1885400894]
+
+[node name="SizzleParticles" type="GPUParticles3D" parent="ArmPivot/CharacterBody3D" unique_id=449001479]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.076911986, -1.0423477)
+emitting = false
+amount = 14
+amount_ratio = 0.7274
+lifetime = 0.36
+one_shot = true
+speed_scale = 2.03
+explosiveness = 0.54
+randomness = 0.9
+process_material = SubResource("ParticleProcessMaterial_2k8ub")
+draw_pass_1 = SubResource("SphereMesh_rkuj1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ArmPivot/CharacterBody3D" unique_id=560329066]
 transform = Transform3D(-2.1855694e-10, 0, -0.005, 0, 0.005, 0, 0.005, 0, -2.1855694e-10, 0, 0, -1.0151169)
