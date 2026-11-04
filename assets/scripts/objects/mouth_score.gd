@@ -4,6 +4,7 @@ func _on_body_entered(body: Node3D) -> void:
 	if body.is_in_group("cullcake_10"):
 		Global.head_pancake_exit += 1 
 		%Gulp.play()
+		%Munch.emitting = true
 		body.queue_free()
 	if body.is_in_group("cullcake_9"):
 		%NoNext.play()

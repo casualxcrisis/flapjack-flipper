@@ -6,13 +6,41 @@
 [ext_resource type="AudioStream" uid="uid://ieg31x2p5kr8" path="res://assets/sfx/531755__magnuswaker__gulp-hard-swallow.wav" id="4_ue3n0"]
 [ext_resource type="AudioStream" uid="uid://5oevnxwgjp48" path="res://assets/sfx/nonext.wav" id="5_qclmr"]
 
+[sub_resource type="Curve" id="Curve_qclmr"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.19594596, 343.8203), 0.0, 0.0, 0, 0, Vector2(0.36486495, 101.12363), 0.0, 0.0, 0, 0, Vector2(0.52027035, 360), 0.0, 0.0, 0, 0, Vector2(0.72972983, 12.134888), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 6
+
+[sub_resource type="CurveTexture" id="CurveTexture_u7mw5"]
+curve = SubResource("Curve_qclmr")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kps3k"]
+emission_shape_scale = Vector3(0.08, 0.045, 0.045)
+emission_shape = 1
+emission_sphere_radius = 1.0
+angle_min = -376.6
+angle_max = 310.2
+angle_curve = SubResource("CurveTexture_u7mw5")
+inherit_velocity_ratio = 0.184
+angular_velocity_min = -371.62
+angular_velocity_max = 54.189983
+gravity = Vector3(0, -3.96, 0.455)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_crplj"]
+albedo_color = Color(0.83934987, 0, 0.13179773, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_cu4ke"]
+material = SubResource("StandardMaterial3D_crplj")
+radius = 0.05
+height = 0.1
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_0yd1l"]
 size = Vector3(0.054163814, 0.07794094, 0.035186768)
 
 [node name="male08 face rigged" unique_id=1303001174 instance=ExtResource("1_n7psp")]
 script = ExtResource("2_r3he5")
 
-[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(895616253) index="0" unique_id=914289780]
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(544224600) index="0" unique_id=290221188]
 bones/11/position = Vector3(0, -0.044, 0.017)
 bones/67/rotation = Quaternion(0.683017, 0.028696, -0.046061, 0.847498)
 bones/68/rotation = Quaternion(0.683017, -0.028007, 0.044955, 0.847558)
@@ -22,7 +50,17 @@ bones/68/rotation = Quaternion(0.683017, -0.028007, 0.044955, 0.847558)
 [node name="MouthScore" type="Area3D" parent="." index="2" unique_id=847055102]
 script = ExtResource("2_3d0n3")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MouthScore" index="0" unique_id=1337017982]
+[node name="Munch" type="GPUParticles3D" parent="MouthScore" index="0" unique_id=2146140733]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012727939, 1.6779808, 0.08576121)
+emitting = false
+one_shot = true
+explosiveness = 0.79
+randomness = 0.9
+process_material = SubResource("ParticleProcessMaterial_kps3k")
+draw_pass_1 = SubResource("SphereMesh_cu4ke")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MouthScore" index="1" unique_id=1337017982]
 transform = Transform3D(1, 0, 0, 0, 0.97703105, -0.21309687, 0, 0.21309687, 0.97703105, 0.00092038885, 1.6832099, 0.08430639)
 shape = SubResource("BoxShape3D_0yd1l")
 debug_color = Color(0.7403216, 0.4668092, 0.0048234714, 0.41960785)
