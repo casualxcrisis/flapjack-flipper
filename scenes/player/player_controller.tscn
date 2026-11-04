@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://di2m4fkd8fvj0" path="res://assets/textures/Material.001_Base_Color.png" id="3_0nonk"]
 [ext_resource type="Texture2D" uid="uid://dwwyh77k3r4bq" path="res://assets/textures/Material.002_Base_Color.png" id="4_5tt2p"]
 [ext_resource type="Script" uid="uid://ll28s23dv6n6" path="res://assets/scripts/player/flip_zone.gd" id="5_5tt2p"]
+[ext_resource type="FontFile" uid="uid://dg344mq5t51we" path="res://assets/fonts/HomeVideo-Regular.ttf" id="6_2k8ub"]
 [ext_resource type="AudioStream" uid="uid://cr4iqc8h36h3o" path="res://assets/sfx/sizzle_edited.wav" id="6_5afdu"]
 [ext_resource type="AudioStream" uid="uid://ct0uayvh406n4" path="res://assets/sfx/365794__zagi2__fear.wav" id="7_m7hbg"]
 
@@ -113,6 +114,45 @@ debug_color = Color(0.9005235, 0.2995936, 0.23283496, 0.41960785)
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1819879716]
 transform = Transform3D(1, 0, 0, 0, 0.98663235, 0.16296192, 0, -0.16296192, 0.98663235, 0, 0.79919535, 0)
 fov = 60.9
+
+[node name="DontMove" type="RichTextLabel" parent="Camera3D" unique_id=709834815]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -329.20996
+offset_top = -50.097504
+offset_right = 344.17004
+offset_bottom = 51.6575
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("6_2k8ub")
+theme_override_font_sizes/normal_font_size = 109
+bbcode_enabled = true
+text = "[shake rate=50 level=5 connected=4]DON'T MOVE[/shake]"
+
+[node name="FeedHim" type="RichTextLabel" parent="Camera3D" unique_id=1877293541]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -266.6975
+offset_top = -53.104996
+offset_right = 266.6975
+offset_bottom = 53.104996
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.7405473, 0, 0.16749257, 1)
+theme_override_fonts/normal_font = ExtResource("6_2k8ub")
+theme_override_font_sizes/normal_font_size = 109
+bbcode_enabled = true
+text = "[wave amp=80.0 freq=5.0 connected=3]FEED HIM[/wave]"
 
 [node name="Sizzle" type="AudioStreamPlayer3D" parent="." unique_id=1698363387]
 unique_name_in_owner = true

@@ -246,7 +246,7 @@ volume_db = -17.944
 pitch_scale = 0.85
 
 [node name="HeadMover" parent="." unique_id=1348349318 instance=ExtResource("12_axl34")]
-transform = Transform3D(-0.99939084, 0, 0.03489945, 0.01398044, 0.91625655, 0.40034795, -0.03197685, 0.40059197, -0.9156984, 0, -0.5084814, 18.503181)
+transform = Transform3D(-0.99939084, 0, 0.03489945, 0.01398044, 0.91625655, 0.40034795, -0.03197685, 0.40059197, -0.9156984, 0, -0.5084814, 18.823479)
 gravity_scale = 0.0
 
 [connection signal="body_entered" from="FloorCull" to="FloorCull" method="_on_body_entered"]
