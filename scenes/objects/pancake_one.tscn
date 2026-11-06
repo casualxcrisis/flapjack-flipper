@@ -43,6 +43,7 @@ anim_speed_max = 1.0
 [sub_resource type="QuadMesh" id="QuadMesh_kps3k"]
 
 [node name="PancakeOne" type="RigidBody3D" unique_id=412852835 groups=["cullcake_1"]]
+mass = 0.814
 continuous_cd = true
 script = ExtResource("1_4bvbj")
 
