@@ -17,7 +17,7 @@ points = PackedVector3Array(-0.5010162, 0.03355753, -0.07827142, 0.5002928, 0.01
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_0yd1l"]
 height = 0.225
-radius = 0.33691406
+radius = 0.427
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_kps3k"]
 height = 1.72
