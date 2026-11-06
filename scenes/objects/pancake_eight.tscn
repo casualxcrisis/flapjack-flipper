@@ -45,6 +45,7 @@ anim_speed_max = 1.0
 [sub_resource type="QuadMesh" id="QuadMesh_xygb3"]
 
 [node name="PancakeEight" type="RigidBody3D" unique_id=1713030172 groups=["cullcake_8"]]
+mass = 2.529
 script = ExtResource("1_prdy2")
 
 [node name="CakeMesh" type="MeshInstance3D" parent="." unique_id=847645705]
