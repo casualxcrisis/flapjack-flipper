@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://dlhhivprvn1mv"]
+
+[ext_resource type="VideoStream" uid="uid://bvufr67bn8tod" path="res://assets/video/pancaketut.ogv" id="1_2rp6b"]
+[ext_resource type="Script" uid="uid://dhbg8vx4j0icu" path="res://assets/scripts/ui/tutorial_video.gd" id="2_dv3sl"]
+[ext_resource type="FontFile" uid="uid://dg344mq5t51we" path="res://assets/fonts/HomeVideo-Regular.ttf" id="2_uhow3"]
+[ext_resource type="AudioStream" uid="uid://n0a0fxdguax4" path="res://assets/sfx/325112__fisch12345__success.wav" id="4_dv3sl"]
+
+[node name="TutorialVideo" type="VideoStreamPlayer" unique_id=2144843015]
+offset_right = 1152.0
+offset_bottom = 648.0
+stream = ExtResource("1_2rp6b")
+autoplay = true
+expand = true
+script = ExtResource("2_dv3sl")
+
+[node name="PanTilt" type="RichTextLabel" parent="." unique_id=1940277873]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -473.0
+offset_right = 473.0
+offset_bottom = 169.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("2_uhow3")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "[center][wave amp=50.0 freq=5.0 connected=1]Tilt your pan UP and DOWN to move the PAN.[/wave][center]"
+
+[node name="PanPlace" type="RichTextLabel" parent="." unique_id=551770851]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -473.0
+offset_right = 473.0
+offset_bottom = 184.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("2_uhow3")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center][wave amp=50.0 freq=5.0 connected=1]When you're ready to create a pancake, place your PAN on the burner and wait.[/wave][center]"
+
+[node name="FlipTip" type="RichTextLabel" parent="." unique_id=258503679]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -473.0
+offset_right = 473.0
+offset_bottom = 184.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("2_uhow3")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center][wave amp=50.0 freq=5.0 connected=1]Now that you have your pancake, pick up the pan and flick your wrist to flip.[/wave][center]"
+
+[node name="SizzleTip" type="RichTextLabel" parent="." unique_id=269275564]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -473.0
+offset_right = 473.0
+offset_bottom = 238.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("2_uhow3")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center][wave amp=50.0 freq=5.0 connected=1]If you hear the sizzle and see the grease you've successfully flipped! Place your pan on the burner for the next pancake.[/wave][center]"
+
+[node name="Remember" type="RichTextLabel" parent="." unique_id=1227527639]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -473.0
+offset_right = 473.0
+offset_bottom = 238.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("2_uhow3")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center][wave amp=50.0 freq=5.0 connected=1]Remember, only[/wave] [color=orange_red][pulse start=4 length=14]ONE[/pulse][/color][wave amp=50.0 freq=5.0 connected=1] flip to the other side. No more, no less.[/wave] [color=dark_red][shake rate=20.0 level=5 connected=1]HE[/shake][/color][wave amp=50.0 freq=5.0 connected=1] demands it. [/wave] [center]"
+
+[node name="TipSound" type="AudioStreamPlayer2D" parent="." unique_id=1607869447]
+unique_name_in_owner = true
+stream = ExtResource("4_dv3sl")
+volume_db = -15.762

@@ -5,4 +5,4 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	if Input.is_action_just_released("spawn_pancake"):
-		get_tree().change_scene_to_file("res://levels/test_level.tscn")
+		get_tree().change_scene_to_file("res://levels/tutorial_video.tscn")
