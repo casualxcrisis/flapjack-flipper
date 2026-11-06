@@ -2,7 +2,7 @@ extends Node
 
 
 ###Pancakes##
-var pancake_counter = 2 #will determine which pancake needs to be instanced
+var pancake_counter = 3 #will determine which pancake needs to be instanced
 
 var head_pancake_enter = 0
 var head_pancake_exit = 0
