@@ -41,6 +41,7 @@ anim_speed_max = 1.0
 [sub_resource type="QuadMesh" id="QuadMesh_e5thp"]
 
 [node name="PancakeSeven" type="RigidBody3D" unique_id=1937346783 groups=["cullcake_7"]]
+mass = 3.82
 script = ExtResource("1_lg5nw")
 
 [node name="CakeMesh" type="MeshInstance3D" parent="." unique_id=1482763487]
@@ -57,7 +58,7 @@ shape = SubResource("ConvexPolygonShape3D_q6yj4")
 [node name="FlipScore" type="Area3D" parent="." unique_id=1569842461 groups=["flip_score_7"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FlipScore" unique_id=330147318]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0040298477, 0.12818144, -0.17523766)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0040298477, 0.21469228, -0.17523766)
 shape = SubResource("BoxShape3D_0yd1l")
 
 [node name="CullcakeZone" type="Area3D" parent="." unique_id=922062534]
