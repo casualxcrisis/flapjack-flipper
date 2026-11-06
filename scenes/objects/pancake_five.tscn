@@ -17,7 +17,7 @@ points = PackedVector3Array(-0.795214, -0.0316919, -0.14883019, 0.8014791, 0.017
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_0yd1l"]
 height = 0.32316893
-radius = 0.37353516
+radius = 0.664
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_kps3k"]
 height = 1.645
@@ -43,6 +43,7 @@ anim_speed_max = 1.0
 [sub_resource type="QuadMesh" id="QuadMesh_11jj6"]
 
 [node name="PancakeFive" type="RigidBody3D" unique_id=1644704138 groups=["cullcake_5"]]
+mass = 3.82
 script = ExtResource("1_3es5y")
 
 [node name="CakeMesh" type="MeshInstance3D" parent="." unique_id=764237977]
